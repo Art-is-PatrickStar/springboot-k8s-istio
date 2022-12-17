@@ -4,7 +4,9 @@ server:
 spring:
   profiles:
     active: dev
+  application:
+    name: user-service
 
 product:
   service:
-    url: http://127.0.0.1:9002/product/hello
+    endpoint: ${PRODUCT_SERVICE_ENDPOINT:http://localhost:9002}

@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
     @GetMapping("/hello")
     public String sayHello() {
-        return "hello from product service.";
+        String msgFromProduct = "hello from product service.";
+        log.info(msgFromProduct);
+        return msgFromProduct;
     }
 }
