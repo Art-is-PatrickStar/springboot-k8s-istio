@@ -13,5 +13,8 @@ spec:
         app: user-service
     spec:
       containers:
-        - image: summer15/user-service:latest
+        - image: summer15/user-service:1.0.0
           name: user-service-container
+          env:
+            - name: PRODUCT_SERVICE_ENDPOINT
+              value: http://product-service:9002

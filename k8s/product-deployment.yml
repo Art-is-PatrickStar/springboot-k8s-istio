@@ -13,5 +13,5 @@ spec:
         app: product-service
     spec:
       containers:
-        - image: summer15/product-service:latest
+        - image: summer15/product-service:1.0.0
           name: product-service-container
