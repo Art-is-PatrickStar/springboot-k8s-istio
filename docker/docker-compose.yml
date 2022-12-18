@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.8'
 services:
   user-service:
     image: summer15/user-service:1.0.0
@@ -6,6 +6,8 @@ services:
     restart: always
     ports:
       - '9001:9001'
+    environment:
+      PRODUCT_SERVICE_ENDPOINT: http://192.168.223.100:9002
 
   product-service:
     image: summer15/product-service:1.0.0
