@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  user-service:
+    image: summer15/user-service:1.0.0
+    container_name: user-service
+    restart: always
+    ports:
+      - '9001:9001'
+
+  product-service:
+    image: summer15/product-service:1.0.0
+    container_name: product-service
+    restart: always
+    ports:
+      - '9002:9002'
+
+
