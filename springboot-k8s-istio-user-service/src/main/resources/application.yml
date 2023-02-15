@@ -9,4 +9,5 @@ spring:
 
 product:
   service:
-    endpoint: ${PRODUCT_SERVICE_ENDPOINT:http://localhost:9002}
+    name: product-service
+    url: ${PRODUCT_SERVICE_ENDPOINT:http://localhost:9002}

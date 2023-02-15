@@ -1,6 +1,6 @@
 package com.wsw.springboot.k8s.istio.user.service.controller;
 
-import com.wsw.springboot.k8s.istio.user.service.client.ProductClient;
+import com.wsw.springboot.k8s.istio.user.service.facade.ProductFacade;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
     @Autowired
-    private ProductClient productClient;
+    private ProductFacade productFacade;
 
     @GetMapping("/hello")
     public String sayHello() {
@@ -28,7 +28,7 @@ public class UserController {
 
     @GetMapping("/getProduct")
     public String getProduct() {
-        String msgFromProduct = productClient.getProduct();
+        String msgFromProduct = productFacade.sayHello();
         log.info(msgFromProduct);
         return msgFromProduct;
     }
